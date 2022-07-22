@@ -11,8 +11,8 @@
  */
 class Solution {
 public:
-    int ans=0;
-    void sum(TreeNode* root,int val)
+
+    void sum(TreeNode* root,int val,int& ans)
     {
         if(root==NULL)
         {
@@ -27,8 +27,8 @@ public:
             return;
         }
         
-        sum(root->left,val);
-        sum(root->right,val);
+        sum(root->left,val,ans);
+        sum(root->right,val,ans);
        
     }
     int sumNumbers(TreeNode* root) {
@@ -36,8 +36,8 @@ public:
         {
             return 0;
         }
-        int value=0;
-        sum(root,value);
+        int value=0,ans=0;
+        sum(root,value,ans);
         return ans;
     }
 };
