@@ -23,6 +23,7 @@ public:
         {
             s+=to_string(root->val);
             v.push_back(s);           
+            return;
         }
         s+=to_string(root->val)+"->";
         makeString(root->left,v,s);
