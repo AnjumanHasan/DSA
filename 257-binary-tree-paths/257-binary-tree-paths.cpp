@@ -22,9 +22,7 @@ public:
         if(root->left==NULL && root->right==NULL)
         {
             s+=to_string(root->val);
-            v.push_back(s);
-            
-            return;
+            v.push_back(s);           
         }
         s+=to_string(root->val)+"->";
         makeString(root->left,v,s);
