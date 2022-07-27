@@ -29,10 +29,11 @@ public:
         }
     
         int start=0,end=temp.size()-1;
-        if(end==start)
-        {
-            return true;
-        }
+        
+        // if(end==start)
+        // {
+        //     return true;
+        // }
         while(end>start)
         {
             if(temp[start]!=temp[end])
