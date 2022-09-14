@@ -2,7 +2,6 @@ class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         
-        bool flag=false;
         for(int i=0;i<matrix.size();i++)
         {
             if(matrix[i][matrix[i].size()-1]<target)
@@ -26,8 +25,7 @@ public:
                     int mid=start+(end-start)/2;
                     if(matrix[i][mid]==target)
                     {
-                        flag=true;
-                        return flag;
+                        return true;
                     }
                     else if(matrix[i][mid]<target)
                     {
@@ -40,6 +38,6 @@ public:
                 }
             }
         }
-        return flag;
+        return false;
     }
 };
