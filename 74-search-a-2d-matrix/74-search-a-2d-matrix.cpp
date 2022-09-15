@@ -4,10 +4,9 @@ public:
         
         for(int i=0;i<matrix.size();i++)
         {
-            if(matrix[i][matrix[i].size()-1]<target)
+            if(matrix[i][matrix[i].size()-1]>=target)
                 {
-                    continue;
-                }
+                   
             for(int j=0;j<matrix[i].size();j++)
             {
                 
@@ -37,6 +36,7 @@ public:
                     }
                 }
             }
+        }
         }
         return false;
     }
