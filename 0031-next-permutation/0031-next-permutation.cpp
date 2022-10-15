@@ -1,7 +1,7 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        bool flag=true;
+
         if(nums.size()<2)
         {
             return;
@@ -12,12 +12,11 @@ public:
             if(nums[i]<nums[i+1])
             {
                 index=i;
-                flag=false;
                 break;
             }
         }
         int index2;
-        if(!flag)
+        if(index!=-1)
         {
         int temp=INT_MAX;
         for(int i=index+1;i<nums.size();i++)
@@ -30,10 +29,9 @@ public:
         }
         swap(nums[index2],nums[index]);
         sort(nums.begin()+index+1,nums.end());
+            return;
         }
-        else if(flag)
-        {
+        
             sort(nums.begin(),nums.end());
-        }
     }
 };
