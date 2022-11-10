@@ -23,7 +23,7 @@ public:
         }
              t=s.top().first;
             s.push({index,price});  
-        return index-t;
+        return s.top().first-t;
     }
 };
 
